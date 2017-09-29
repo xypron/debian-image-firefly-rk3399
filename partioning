@@ -1,0 +1,9 @@
+label: dos
+label-id: 0x378e54c5
+device: image
+unit: sectors
+
+image1: start=   32768, size=  229376, type=ef
+image2: start=  262144, size=  786432, type=0c, bootable
+image3: start= 1048576, size= 5242880, type=83
+image4: start=    2048, size=   30720, type=da
