@@ -1,4 +1,5 @@
 all:
+	make unmount
 	make prepare
 	make mount
 	make debootstrap
@@ -6,7 +7,7 @@ all:
 	make copy
 	make flash
 	make unmount
-	# make compress
+	make compress
 
 prepare:
 	sudo rm -f image image.*
@@ -35,6 +36,7 @@ debootstrap:
 mount2:
 	sudo mkdir -p mnt/EFI
 	sudo mount /dev/loop1 mnt/EFI || true
+	sudo mkdir -p mnt/boot
 	sudo mount /dev/loop2 mnt/boot || true
 
 copy:
@@ -62,6 +64,7 @@ unmount:
 	sudo umount mnt/sys || true
 	sudo umount mnt/proc || true
 	sudo umount mnt/boot || true
+	sudo umount mnt/EFI || true
 	sudo umount mnt || true
 	sudo losetup -d /dev/loop3 || true
 	sudo losetup -d /dev/loop2 || true
