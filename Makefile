@@ -50,8 +50,10 @@ copy:
 	sudo rm mnt/setup.sh
 
 flash:
-	sudo dd if=mnt/usr/lib/u-boot/firefly-rk3399/u-boot-spl.rksd \
-	  of=image seek=64 conv=notrunc
+	mkimage -n rk3399 -T rksd -d \
+	  mnt/usr/lib/u-boot/firefly-rk3399/u-boot-spl.bin out
+	sudo dd if=out of=image seek=64 conv=notrunc
+	rm out
 	sudo dd if=mnt/usr/lib/u-boot/firefly-rk3399/u-boot.img \
 	  of=image seek=256 conv=notrunc
 
