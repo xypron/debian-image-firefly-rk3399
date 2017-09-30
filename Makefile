@@ -40,6 +40,7 @@ mount2:
 	sudo mount /dev/loop2 mnt/boot || true
 
 copy:
+	sudo cp modules mnt/etc/modules
 	sudo cp eth0 mnt/etc/network/interfaces.d/
 	sudo cp fstab mnt/etc/
 	sudo cp flash-kernel mnt/etc/default/
