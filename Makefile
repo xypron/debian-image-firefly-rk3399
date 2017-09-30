@@ -57,7 +57,7 @@ flash:
 	sudo dd if=out of=image seek=64 conv=notrunc
 	rm out
 	sudo dd if=mnt/usr/lib/u-boot/firefly-rk3399/u-boot.img \
-	  of=image seek=256 conv=notrunc
+	  of=image seek=512 conv=notrunc
 
 unmount:
 	sync
