@@ -1,4 +1,4 @@
 UUID=c6716f99-a409-4bf0-80e0-4a789a6c49b6 / ext4 errors=remount-ro,noatime,nodiratime 0 1
 UUID=09e086a3-c41f-48d4-af58-e63b56979d8f /boot ext2 noatime,nodiratime 0 2
-UUID=214f0ace /EFI vfat default 0 2
+UUID=214F-0ACE /EFI vfat defaults 0 2
 tmpfs	/tmp	tmpfs	nosuid	0	0
