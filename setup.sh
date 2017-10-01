@@ -1,6 +1,6 @@
 #!/bin/sh
 apt-get update
-apt-get install less locales ssh sudo vim -y
+apt-get install less locales ssh sudo vim ca-certificates -y
 apt-get install u-boot-rockchip flash-kernel -y
 cd /tmp
 wget http://ftp.us.debian.org/debian/pool/main/l/linux/linux-image-4.13.0-trunk-arm64_4.13.2-1~exp1_arm64.deb
