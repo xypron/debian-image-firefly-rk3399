@@ -74,3 +74,6 @@ unmount:
 compress:
 	sha512sum image > image.sha512
 	fakeroot xz -9 -k image
+
+clean:
+	sudo rm -f image image.*
