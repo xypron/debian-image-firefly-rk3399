@@ -41,6 +41,10 @@ mount2:
 
 copy:
 	sudo cp modules mnt/etc/modules
+	sudo mkdir -p mnt/etc/initramfs-tools/
+	sudo cp initramfs-tools-modules mnt/etc/initramfs-tools/modules
+	sudo mkdir -p /etc/modprobe.d/
+	sudo cp blacklist /etc/modprobe.d/blacklist
 	sudo cp eth0 mnt/etc/network/interfaces.d/
 	sudo cp fstab mnt/etc/
 	sudo cp flash-kernel mnt/etc/default/

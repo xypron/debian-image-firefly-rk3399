@@ -1,0 +1,7 @@
+# Modules that shall no be loaded
+#
+# A possible entry would be:
+#
+# blacklist fan53555
+#
+blacklist fan53555
